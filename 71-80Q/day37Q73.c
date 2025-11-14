@@ -1,0 +1,35 @@
+/* Find the sum of all elements in a matrix.
+
+
+Input 1:
+2 3
+1 2 3
+4 5 6
+Output 1:
+21
+
+*/
+
+#include<stdio.h>
+
+int main (){
+    int rows,columns;
+    printf("Enter rows and columns :"):
+    scanf("%d %d",&rows,&columns);
+    int arr[rows][columns];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<columns;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    
+    int sum = 0;
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<columns;j++){
+            sum += arr[i][j];
+        }
+    }
+    
+    printf("%d\n",sum);
+    return 0;
+}
